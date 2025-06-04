@@ -151,9 +151,9 @@ if __name__ == '__main__':
         else:
             graph["ccTLDs"][ccTLD].append(domain)
 
-    #save(graph, "graph_1000.json")
-    #poss = fruchterman_reingold_graph(graph)
-    #save(poss, "graph_1000_poss.json")
+    save(graph, "graph_1000.json")
+    poss = fruchterman_reingold_graph(graph)
+    save(poss, "graph_1000_poss.json")
 
     def kanten_zu_größe(n): # sigmoid / 2 als Vierecksgröße abh. von Kantenmenge
         return (0.9 / (1 + math.exp(-n))) - 0.4
